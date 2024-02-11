@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="TRICR/TRICR/App.axaml" value="TRICR/TRICR.Desktop/TRICR.Desktop.csproj" />
+        <entry key="TRICR/TRICR/Views/HistoryView.axaml" value="TRICR/TRICR.Desktop/TRICR.Desktop.csproj" />
+        <entry key="TRICR/TRICR/Views/LocationView.axaml" value="TRICR/TRICR.Desktop/TRICR.Desktop.csproj" />
+        <entry key="TRICR/TRICR/Views/MainView.axaml" value="TRICR/TRICR.Desktop/TRICR.Desktop.csproj" />
+        <entry key="TRICR/TRICR/Views/MainWindow.axaml" value="TRICR/TRICR.Desktop/TRICR.Desktop.csproj" />
+        <entry key="TRICR/TRICR/Views/PopularRoutesView.axaml" value="TRICR/TRICR.Desktop/TRICR.Desktop.csproj" />
+        <entry key="TRICR/TRICR/Views/Response.axaml" value="TRICR/TRICR.Desktop/TRICR.Desktop.csproj" />
+        <entry key="TRICR/TRICR/Views/SearchView.axaml" value="TRICR/TRICR.Desktop/TRICR.Desktop.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,29 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:TRICR.ViewModels"
+             xmlns:rxui="clr-namespace:Avalonia.ReactiveUI;assembly=Avalonia.ReactiveUI"
+             xmlns:app="clr-namespace:TRICR"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="TRICR.Views.SearchView"
+             x:DataType="vm:SearchViewModel">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Source="avares://TRICR/Assets/background_img.png" Stretch="Fill"/>
+        </Grid.Background>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBox VerticalAlignment="Center" HorizontalAlignment="Stretch" VerticalContentAlignment="Center" CornerRadius="5" Watermark="From" Width="250" Height="30" Margin="1" Text="{Binding From, Mode=TwoWay}"/>
+                <TextBox VerticalAlignment="Center" HorizontalAlignment="Stretch" VerticalContentAlignment="Center" CornerRadius="5" Watermark="Where" Width="250" Height="30" Margin="1" Text="{Binding Where, Mode=TwoWay}" />
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBox VerticalAlignment="Center" CornerRadius="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Watermark="Date" Width="15" Height="30" Margin="1" Text="{Binding Date, Mode=TwoWay}" />
+                    <TextBox VerticalAlignment="Center" CornerRadius="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Watermark="1" Width="15" Height="30" Margin="1" Text="{Binding Passengers, Mode=TwoWay}" />
+                    <Button VerticalAlignment="Center" CornerRadius="5" Content="Find" Width="119" Height="30" Margin="1, 1, 1, 1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding Response}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Button VerticalAlignment="Center" CornerRadius="5" Content="Popular" Command="{Binding Popular}" Width="100" Height="30" Margin="1, 1, 1, 1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <Button VerticalAlignment="Center" CornerRadius="5" Content="History" Command="{Binding History}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="150" Height="30" Margin="1"/>
+                </StackPanel>   
+        </StackPanel>
+    </Grid>
+</UserControl>

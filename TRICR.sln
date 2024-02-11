@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRICR", "TRICR\TRICR\TRICR.csproj", "{7AA2020A-EA06-423C-B8DC-C153D975E17E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRICR.Android", "TRICR\TRICR.Android\TRICR.Android.csproj", "{3C3840CD-6477-4C28-B900-47187518A1CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRICR.Desktop", "TRICR\TRICR.Desktop\TRICR.Desktop.csproj", "{2B68B3A5-7FE4-49C2-B352-FCD324D9E7C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7AA2020A-EA06-423C-B8DC-C153D975E17E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AA2020A-EA06-423C-B8DC-C153D975E17E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AA2020A-EA06-423C-B8DC-C153D975E17E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AA2020A-EA06-423C-B8DC-C153D975E17E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C3840CD-6477-4C28-B900-47187518A1CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C3840CD-6477-4C28-B900-47187518A1CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C3840CD-6477-4C28-B900-47187518A1CF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3C3840CD-6477-4C28-B900-47187518A1CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C3840CD-6477-4C28-B900-47187518A1CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C3840CD-6477-4C28-B900-47187518A1CF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2B68B3A5-7FE4-49C2-B352-FCD324D9E7C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B68B3A5-7FE4-49C2-B352-FCD324D9E7C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B68B3A5-7FE4-49C2-B352-FCD324D9E7C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B68B3A5-7FE4-49C2-B352-FCD324D9E7C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

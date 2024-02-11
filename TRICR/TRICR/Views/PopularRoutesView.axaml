@@ -1,0 +1,44 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:rxui="clr-namespace:Avalonia.ReactiveUI;assembly=Avalonia.ReactiveUI"
+             xmlns:app="clr-namespace:TRICR"
+             xmlns:vm="clr-namespace:TRICR.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="TRICR.Views.PopularRoutesView"
+             x:DataType="vm:PopularRoutesViewModel">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Source="avares://TRICR/Assets/background_img.png" Stretch="Fill"/>
+        </Grid.Background>
+        <Border Background="#D9D9D9" CornerRadius="15" Margin="50, 20, 50, 20">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/> 
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Text="Popular routes" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,15,0,15" Foreground="Black" FontSize="24" />
+                <Button Command="{Binding GoBack}" Content="←" Background="#D9D9D9" Foreground="Black"></Button>
+                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                    <DataGrid Margin=" 0, 0,0, 10" IsReadOnly="True" BorderThickness="10"
+                              GridLinesVisibility="All" ItemsSource="{Binding DirectionsData}"
+                              AutoGenerateColumns="False" BorderBrush="#D9D9D9"
+                              Background="#D9D9D9" CornerRadius="15" FontSize="12" Foreground="Black">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Destination" Binding="{Binding Destination}" Width="*" />
+                            <DataGridTextColumn Header="Departure" Binding="{Binding departure_at}" Width="*" />
+                            <DataGridTextColumn Header="Return" Binding="{Binding return_at}" Width="*" />
+                            <DataGridTextColumn Header="Airline" Binding="{Binding Airline}" Width="*" />
+                            <DataGridTextColumn Header="Flight number" Binding="{Binding flight_number}" Width="*" />
+                            <DataGridTextColumn Header="Price" Binding="{Binding Price}" Width="*" />
+                            <DataGridTextColumn Header="Transfers" Binding="{Binding Transfers}" Width="*" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </ScrollViewer>
+                <Separator Grid.Row="2" Height="2" Background="#D9D9D9"></Separator>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

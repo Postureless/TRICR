@@ -1,0 +1,40 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:TRICR.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="TRICR.Views.HistoryView"
+             x:DataType="vm:HistoryViewModel">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Source="avares://TRICR/Assets/background_img.png" Stretch="Fill"/>
+        </Grid.Background>
+        <Border Background="#D9D9D9" CornerRadius="15" Margin="50, 20, 50, 20">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Text="Search History" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,15,0,15" Foreground="Black" FontSize="24" />
+                <Button Grid.Row="0" Command="{Binding GoBack}" Content="←" Background="#D9D9D9" Foreground="Black"></Button>
+                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                    <DataGrid Margin="0, 0, 0, 10" IsReadOnly="True" BorderThickness="10"
+                              GridLinesVisibility="All" ItemsSource="{Binding SearchHistory}"
+                              AutoGenerateColumns="False" BorderBrush="#D9D9D9"
+                              Background="#D9D9D9" CornerRadius="15" Foreground="Black" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="From" Binding="{Binding From}" Width="1*"/>
+                            <DataGridTextColumn Header="Where" Binding="{Binding Where}" Width="1*"/>
+                            <DataGridTextColumn Header="Departure Date" Binding="{Binding DepartureDate}" Width="2*"/>
+                            <DataGridTextColumn Header="Return Date" Binding="{Binding ReturnDate}" Width="2*"/>
+                            <DataGridTextColumn Header="Passengers" Binding="{Binding Passengers}" Width="1*" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </ScrollViewer>
+                <Separator Grid.Row="2" Height="2" Background="#D9D9D9"></Separator>
+            </Grid>
+        </Border>
+        </Grid>
+</UserControl>

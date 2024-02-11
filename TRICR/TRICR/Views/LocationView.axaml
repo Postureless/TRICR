@@ -1,0 +1,20 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:rxui="clr-namespace:Avalonia.ReactiveUI;assembly=Avalonia.ReactiveUI"
+             xmlns:app="clr-namespace:TRICR"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:TRICR.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="TRICR.Views.LocationView"
+             x:DataType="vm:LocationViewModel">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Source="avares://TRICR/Assets/background_img.png" Stretch="Fill"/>
+        </Grid.Background>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBox Text="{Binding Location, Mode=TwoWay}" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" CornerRadius="5" Watermark="Location" Width="250" Height="45" VerticalContentAlignment="Center" Margin="10"/>
+                     <Button Command="{Binding GoNext}" VerticalAlignment="Center" HorizontalAlignment="Center" CornerRadius="12" Content="Start" Width="250" Height="45" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
